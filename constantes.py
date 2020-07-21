@@ -17,7 +17,7 @@ NB_SPRITE = 15
 SPRITE_SIZE = 30
 SCREEN_SIZE = ((NB_SPRITE +2 ) * SPRITE_SIZE, (NB_SPRITE +2) * SPRITE_SIZE)
 
-#Display video of window game
+#Display of window game
 screen = pygame.display.set_mode(SCREEN_SIZE)
 screen_TITLE = "Labyrinthe of MacGyver"
 Guardian = pygame.image.load("pictures/Gardien.png").convert_alpha()

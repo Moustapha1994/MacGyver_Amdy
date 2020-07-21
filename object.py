@@ -49,23 +49,21 @@ class Items():
         self.maze.structure[self.sprite_y][self.sprite_x] = self.name
 
     def display_items(self, screen, MacGyver, TOOLS):
-        """Conditional display of the element:
-        if MG caught it we write "0" instead of self.name on labyrinth.
-        the display is True if the name of the elements is in place of it,
-        else we display nothing"""
+        """Conditional display of the element
+        """
 
         if self.maze.structure[self.sprite_y][self.sprite_x] == self.name:
             screen.blit(self.surface, (self.x + 30, self.y + 30))  # + 30 for the offset of the black outline
 
         if self.maze.structure[MacGyver.sprite_y][MacGyver.sprite_x] == self.name:
-            #####dysplay the pick-up of the elements#############
+            ######dysplay the pick-up of the elements#############
             screen.blit(PICKUP, (120, 120 ))  # + 30 for the offset of the black outline
             pygame.display.flip()
             # JINGLE.play()
             time.sleep(1)
-            #####################################################
 
-            print("Yeah! You caught the {}!".format(self.name))
+
+            print(" You have caught the {}!".format(self.name))
             self.maze.structure[MacGyver.sprite_y][MacGyver.sprite_x] = "0"
             TOOLS.append(self.name)
 

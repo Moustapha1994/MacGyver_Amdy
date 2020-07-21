@@ -11,7 +11,7 @@ from  player import *
 pygame.display.set_icon(Guardian)
 pygame.display.set_caption(screen_TITLE)
 
-# MAIN_LOOP
+# main boucle
 running = 1
 while running:
 
@@ -37,7 +37,7 @@ while running:
                 running_welcome = 0
                 running_game = 0
 
-            # Quit home loop to enter in game loop with taping any key
+            # Quit home boucle to enter in game boucle with taping any key
             if event.type == KEYDOWN :
                 #Welcome to the game
 
@@ -53,7 +53,7 @@ while running:
                 # Load the game's maze from file
                 FILE = "level_game"
 
-    if FILE != "":  # We make sure that the file really exists and is not empty
+    if FILE != "":  # We assure that the file really exists and is not empty
 
         # loading the background
         screen.blit(BACKGROUND, (30, 30))
@@ -82,7 +82,7 @@ while running:
 
     # la boucle du jeu
 
-    # Initialization de chaque boucle du jeu dans un liste vide pour y mettre les items
+    # Initialization de chaque boucle du jeu dans une liste vide pour y mettre les items
     box = []
     while running_game:
 
@@ -135,7 +135,7 @@ while running:
                 pygame.display.flip()
                 time.sleep(2)
                 ######
-                print("You loose ! Try again later")
+                print("You have lost ! Try again later")
                 running_game = 0
 
             if len(box) == 3:
